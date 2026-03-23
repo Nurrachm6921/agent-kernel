@@ -1,18 +1,8 @@
 # Agent Kernel
 
-Three files that make any AI coding agent stateful. It remembers between sessions, takes notes, and builds on past work.
+Clone this repo, start your AI agent, and it becomes stateful — it remembers between sessions, takes notes, and builds on past work.
 
-## How it works
-
-AI coding agents (Claude Code, OpenCode, Codex, Cursor, etc.) start every session with amnesia. They don't remember what happened yesterday.
-
-This repo fixes that. Drop these three files into any project and your agent becomes stateful:
-
-- **`AGENTS.md`** — The kernel. Tells the agent it's stateful, how to manage memory, how to communicate. Fully generic — works with any agent, any domain.
-- **`IDENTITY.md`** — Who this specific agent is. Starts blank — the agent asks you on first run.
-- **`KNOWLEDGE.md`** — Index of what the agent knows. Starts empty — grows as the agent learns.
-
-The agent stores facts in `knowledge/` and daily session logs in `notes/`. Everything is plain markdown in a git repo. Human-readable, version-controlled, inspectable.
+Works with any AI coding agent: OpenCode, Claude Code, Codex, Cursor, Windsurf, etc.
 
 ## Quick start
 
@@ -21,20 +11,13 @@ git clone https://github.com/oguzbilgic/agent-kernel.git my-agent
 cd my-agent
 ```
 
-Then open it with your agent:
+Start your agent:
 
 ```bash
-# OpenCode
-opencode
-
-# Claude Code
-claude
-
-# Codex
-codex
+opencode     # or claude, codex, cursor, etc.
 ```
 
-On the first session, the agent reads `IDENTITY.md`, realizes it has no identity, and asks you who it is. You tell it. It writes that down. Next session, it remembers.
+That's it. The agent reads the kernel, realizes it's new, asks who you want it to be. You tell it. It remembers.
 
 ## What happens
 
@@ -76,14 +59,15 @@ The agent doesn't need a database, a vector store, or a custom framework. It jus
 
 ## Multiple agents
 
-The kernel is generic. To create a new agent:
+Each agent is its own repo. To create another:
 
 ```bash
-cp -r agent-kernel/ new-agent/
-cd new-agent && git init
+git clone https://github.com/oguzbilgic/agent-kernel.git another-agent
+cd another-agent
+opencode     # or claude, codex, etc.
 ```
 
-Each agent gets its own repo, its own identity, its own knowledge. The `AGENTS.md` kernel is identical across all of them — only `IDENTITY.md` changes.
+Same kernel, different identity, different knowledge. You can have a homelab agent, an investing agent, a health agent — all running the same OS.
 
 ## Design
 
