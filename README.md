@@ -36,6 +36,15 @@ Two kinds of memory:
 - **`knowledge/`** — State. Facts about how things are right now. The agent updates these when reality changes.
 - **`notes/`** — Narrative. What happened each session — decisions, actions, open items. Append-only. Never modified after the day ends.
 
+## Why this works
+
+AI agents already read `AGENTS.md` (or `CLAUDE.md`, `.cursorrules`, etc.) as project instructions. This kernel uses that mechanism to teach the agent *how to remember*.
+
+The agent doesn't need a database, a vector store, or a custom framework. It just needs:
+- A file that says "you are stateful, here's how"
+- A git repo to store memory in
+- Plain markdown files
+
 ## Multiple agents
 
 Each agent is its own repo. To create another:
