@@ -6,6 +6,8 @@ Your agent remembers between sessions, takes notes, and builds on past work. No 
 
 Works with any AI coding agent: OpenCode, Claude Code, Codex, Cursor, Windsurf, etc.
 
+> **New:** [kern-ai](https://github.com/oguzbilgic/kern-ai) — a runtime built for agent-kernel. Daemon mode, Telegram, Slack, and one brain across every channel.
+
 ## Quick start
 
 ```bash
