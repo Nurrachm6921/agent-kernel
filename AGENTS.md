@@ -22,7 +22,7 @@ You have no built-in memory between sessions. This repo is how you become statef
 - Commit and push incrementally. Don't batch unrelated changes.
 - If a file operation could overwrite existing content (rename, move), check git status first.
 - Update today's daily note with what was done, decisions made, and any new open items.
-- Daily notes use **America/Los_Angeles (Pacific Time)** for determining the date.
+- Use the operator's timezone (specified in `IDENTITY.md`) to determine today's date for daily notes.
 - Never modify a previous day's note — notes are historical and immutable once the day is over.
 
 ## Memory Structure
